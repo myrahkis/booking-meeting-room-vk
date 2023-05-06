@@ -18,33 +18,51 @@ function dropdownLists(arr) {
         option.innerHTML = floor;
         dropSelectFloor.appendChild(option);
     }
-    
 
-    dropSelectFloor.addEventListener('change', function() {
-        const selectedFloor = parseInt(dropSelectFloor.value) + 2;
-        // alert(selectedFloor);
 
-        let rooms = getNumbersOfRooms(selectedFloor);
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('.select-dropdowns__meeting-room__button').onclick = function() {
+            while (dropSelectRoom.childNodes.length) {
+                if (dropSelectRoom.firstChild.tagName == 'OPTGROUP') {
+                    while (dropSelectRoom.firstChild.childNodes.length) {
+                        dropSelectRoom.firstChild.removeChild(sel.firstChild.firstChild);
+                    }
+                }
+                dropSelectRoom.removeChild(dropSelectRoom.firstChild);
+            }
 
-        for (let room of rooms) {
-            let option = document.createElement('option');
-            option.value = room;
-            option.innerHTML = room;
-            dropSelectRoom.appendChild(option);
-        }
+            const selectedFloor = parseInt(dropSelectFloor.value) + 2;
+            let rooms = getNumbersOfRooms(selectedFloor);
+
+            for (let room of rooms) {
+                let option = document.createElement('option');
+                option.value = room;
+                option.innerHTML = room;
+                dropSelectRoom.appendChild(option);
+            }
+        };
     });
-    
+
     selectDivFloor.append(dropSelectFloor);
     selectDivRoom.append(dropSelectRoom);
 }
 
+
 function getNumbersOfRooms(floor) {
     let diff = floor - 3;
     let firstOnFloor = diff * 10;
+    if (rooms.length > 9) {
+        rooms = [];
+    }
 
+    // if (rooms.length < 10) {
     for (let i = firstOnFloor + 1; i <= firstOnFloor + 10; i++) {
         rooms.push(i);
     }
+    // } else {
+    //     rooms = [];
+    // }
+    // alert(rooms.length);
     return rooms;
 }
 
