@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <link rel="shortcut icon" href="building-fill-lock.svg" type="image/x-icon">
-    <link href="main.css" rel="stylesheet">
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="scripts/dropdowns.js"></script>
+    <script defer src="scripts/dateTimePicker.js"></script>
     <title>BookMe</title>
 </head>
 <body>
@@ -36,7 +38,14 @@
                     <div class="date-time-picker__time">
                         <label for="text">Выберите время:</label>
                         <div class="date-time-picker__date input-group">
-                            <input type="text" class="form-control" id="time" placeholder="ЧЧ:ММ - ЧЧ:ММ"/>
+                            <select class="form-select">
+                                <option selected>8:00-10:00</option>
+                                <option value="2">10:00-12:00</option>
+                                <option value="3">12:00-14:00</option>
+                                <option value="4">14:00-16:00</option>
+                                <option value="5">16:00-18:00</option>
+                                <option value="6">18:00-20:00</option>
+                            </select>
                             <span class="input-group__icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
                                     <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>

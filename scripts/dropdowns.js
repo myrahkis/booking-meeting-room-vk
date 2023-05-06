@@ -1,4 +1,5 @@
 /* выпадающие списки этажей */
+
 let floors = [];
 let rooms = [];
 
@@ -55,18 +56,12 @@ function getNumbersOfRooms(floor) {
         rooms = [];
     }
 
-    // if (rooms.length < 10) {
     for (let i = firstOnFloor + 1; i <= firstOnFloor + 10; i++) {
         rooms.push(i);
     }
-    // } else {
-    //     rooms = [];
-    // }
-    // alert(rooms.length);
     return rooms;
 }
 
 dropdownLists(floors);
 
-// console.log(getNumbersOfRooms(5));
 
