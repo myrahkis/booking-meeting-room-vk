@@ -6,6 +6,5 @@
 Project can be viewed at the link:
 > 
 ### Stack:
-#### HTML, CSS, JavaScript, Bootstrap5
-
+#### HTML, CSS, JavaScript
 
