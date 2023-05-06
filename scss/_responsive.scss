@@ -1,0 +1,31 @@
+/* Large: 992-1199px */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
+/* Medium: 768-991px */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+    } 
+}
+
+/* Small: 576-767px */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+}
+
+/* Extra small: 320-575px */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}

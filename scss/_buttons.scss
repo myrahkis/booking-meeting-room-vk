@@ -1,0 +1,39 @@
+$send-color: #11a795;
+$clear-color: #F2523A;
+$hover-send-color: #258f83;
+$hover-clear-color: #d1371f;
+$text-color: #FFFFFF;
+
+%btn-basic {
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 14px 22px;
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+    max-width: 150px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.button__send-btn {
+    @extend %btn-basic;
+    background: $send-color;
+    border-color: $send-color;
+    color: $text-color;
+    &:hover {
+        background: $hover-send-color;
+        border-color: $hover-send-color;
+    }
+}
+
+.button__clear-btn {
+    @extend %btn-basic;
+    background: $clear-color;
+    border-color: $clear-color;
+    color: $text-color;
+    &:hover {
+        background: $hover-clear-color;
+        border-color: $hover-clear-color;
+    }
+}
