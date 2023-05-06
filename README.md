@@ -4,7 +4,7 @@
 - A form for booking a meeting room
 
 Project can be viewed at the link:
-> 
+> https://myrahkis.github.io/booking-meeting-room-vk/
 ### Stack:
 #### HTML, CSS, JavaScript
 
