@@ -22,7 +22,7 @@ function dropdownLists(arr) {
 
     document.addEventListener("DOMContentLoaded", function() {
         dropSelectFloor.addEventListener('click', addRooms);
-        dropSelectFloor.addEventListener('touchstart', addRooms);
+        dropSelectFloor.addEventListener('touchend', addRooms);
     });
 
     function addRooms() {
