@@ -72,6 +72,7 @@
 
 .select-dropdowns__floor-room__floor {
   min-width: 155px;
+  margin-right: 25px;
 }
 
 .select-dropdowns__floor-room__room {
@@ -154,7 +155,6 @@
 
 * {
   box-sizing: border-box;
-  outline: 1px solid;
 }
 
 html, body {
