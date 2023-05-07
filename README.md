@@ -6,5 +6,5 @@
 Project can be viewed at the link:
 > https://myrahkis.github.io/booking-meeting-room-vk/
 ### Stack:
-#### HTML, CSS, JavaScript
+#### HTML, CSS, SCSS, JavaScript
 
