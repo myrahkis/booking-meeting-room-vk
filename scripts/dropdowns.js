@@ -21,20 +21,23 @@ function dropdownLists(arr) {
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-        dropSelectFloor.addEventListener('click', function() {
-            clearSelectRooms();
-            
-            const selectedFloor = parseInt(dropSelectFloor.value) + 2;
-            let rooms = getNumbersOfRooms(selectedFloor);
-
-            for (let room of rooms) {
-                let option = document.createElement('option');
-                option.value = room;
-                option.innerHTML = room;
-                dropSelectRoom.appendChild(option);
-            }
-        })
+        dropSelectFloor.addEventListener('click', addRooms);
+        dropSelectFloor.addEventListener('touchstart', addRooms);
     });
+
+    function addRooms() {
+        clearSelectRooms();
+            
+        const selectedFloor = parseInt(dropSelectFloor.value) + 2;
+        let rooms = getNumbersOfRooms(selectedFloor);
+
+        for (let room of rooms) {
+            let option = document.createElement('option');
+            option.value = room;
+            option.innerHTML = room;
+            dropSelectRoom.appendChild(option);
+        }
+    }
 
     function clearSelectRooms() {
         while (dropSelectRoom.childNodes.length) {
