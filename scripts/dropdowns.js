@@ -53,7 +53,7 @@ function dropdownLists(arr) {
         //         dropSelectRoom.removeChild(dropSelectRoom.firstChild);
         //     }
 
-            // const selectedFloor = parseInt(dropSelectFloor.value) + 2;
+        // const selectedFloor = parseInt(dropSelectFloor.value) + 2;
         //     let rooms = getNumbersOfRooms(selectedFloor);
 
         //     for (let room of rooms) {

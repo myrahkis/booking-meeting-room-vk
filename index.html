@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="main.css">
     <script defer src="scripts/dropdowns.js"></script>
     <script defer src="scripts/dateTimePicker.js"></script>
+    <script defer src="scripts/sendClearButtons.js"></script>
     <title>BookMe</title>
 </head>
 <body>
@@ -90,7 +91,7 @@
                 </div>
                 <div class="buttons">
                     <button type="submit" class="button__send-btn">Отправить</button>
-                    <button type="submit" class="button__clear-btn">Очистить</button>
+                    <button type="reset" class="button__clear-btn">Очистить</button>
                 </div>
             </div>
         </section>
@@ -101,16 +102,5 @@
             <p>© 2023 myrahkis</p>
         </div>
     </footer>
-    <script>
-        document.getElementById('formBooking').addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const form = document.getElementById("formBooking");
-            const submitter = document.querySelector("button[type=submit]");
-            const formData = new FormData(form, submitter);
-
-            console.log(JSON.stringify(Object.fromEntries(formData)));
-        });
-    </script>
 </body>
 </html>
