@@ -1,3 +1,26 @@
+$primary-color: #11a795;
+$inputs-with-icons-width: 201px;
+$inputs-min-width: 155px;
+$margin-inbetween: 25px;
+
+%select-row {
+    display: flex;
+    flex-direction: row;
+}
+
+%select-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
 .container {
     max-width: 1110px;
     margin: 0 auto;
@@ -13,14 +36,76 @@
 .input-group__icon {
     display: flex;
     align-items: center;
+    flex-direction: row;
     padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: center;
-    white-space: nowrap;
-    background-color: #e9ecef;
+    background-color: white;
     border: 1px solid #ced4da;
     border-radius: 0.375rem;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 607px;
+    margin: 65px 0;
+    padding: 41px 52px;
+}
+
+.date-time-picker {
+    @extend %select-row;
+}
+
+.date-time-picker__date {
+    @extend %select-column;
+    max-width: $inputs-with-icons-width;
+    margin-right: 15px;
+}
+
+.date-time-picker__time {
+    @extend %select-column;
+    max-width: $inputs-with-icons-width;
+}
+
+.select-dropdowns {
+    @extend %select-column;
+    margin-top: $margin-inbetween;
+    margin-bottom: $margin-inbetween;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-dropdowns__floor-room {
+    @extend %select-row;
+}
+
+.select-dropdowns__tower {
+    @extend %select-column;
+    justify-content: center;
+    align-items: center;
+    min-width: $inputs-min-width;
+    margin-bottom: $margin-inbetween;
+}
+
+.select-dropdowns__floor-room__floor {
+    min-width: $inputs-min-width;
+}
+
+.select-dropdowns__floor-room__room {
+    min-width: $inputs-min-width;
+}
+
+.comment {
+    margin-top: $margin-inbetween;
+    margin-bottom: $margin-inbetween;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__h1 {
+    margin-bottom: 19px;
 }

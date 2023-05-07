@@ -7,11 +7,11 @@ $text-color: #FFFFFF;
 %btn-basic {
     cursor: pointer;
     border-radius: 25px;
-    padding: 14px 22px;
+    padding: 7px 9px;
     font-size: 1rem;
     font-weight: 400;
     display: block;
-    max-width: 150px;
+    min-width: 115px;
     transition: all 0.5s ease;
     text-decoration: none;
 }
