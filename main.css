@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
 .select-dropdowns__floor-room, .date-time-picker {
   display: flex;
   flex-direction: row;
@@ -63,9 +64,12 @@
   align-items: center;
 }
 
+.select-dropdowns__floor-room {
+  min-width: 417px;
+  justify-content: space-between;
+}
+
 .select-dropdowns__tower {
-  justify-content: center;
-  align-items: center;
   min-width: 155px;
   margin-bottom: 25px;
 }
@@ -90,7 +94,7 @@
 }
 
 .header__h1 {
-  margin-bottom: 19px;
+  margin-bottom: 25px;
 }
 
 /* Large: 992-1199px */
@@ -123,9 +127,10 @@
 }
 .button__clear-btn, .button__send-btn {
   cursor: pointer;
+  font-family: "Comfortaa", cursive;
   border-radius: 25px;
   padding: 7px 9px;
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 400;
   display: block;
   min-width: 115px;
@@ -161,11 +166,16 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #F5F5F5;
+  font-family: "Comfortaa", cursive;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+.header__h1 {
+  font-weight: 700;
 }
 
 .form-control {

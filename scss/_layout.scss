@@ -78,12 +78,12 @@ $margin-inbetween: 25px;
 
 .select-dropdowns__floor-room {
     @extend %select-row;
+    min-width: 417px;
+    justify-content: space-between;
 }
 
 .select-dropdowns__tower {
     @extend %select-column;
-    justify-content: center;
-    align-items: center;
     min-width: $inputs-min-width;
     margin-bottom: $margin-inbetween;
 }
@@ -109,5 +109,5 @@ $margin-inbetween: 25px;
 }
 
 .header__h1 {
-    margin-bottom: 19px;
+    margin-bottom: $margin-inbetween;
 }
