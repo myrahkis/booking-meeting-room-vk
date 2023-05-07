@@ -25,7 +25,61 @@
 /* Extra small: 320-575px */
 @media (max-width: 575px) {
     .container {
-        padding: 0 15px;
+        max-width: 300px;
         margin: 0 auto;
+    }
+    .form-container {
+        max-width: 300px;
+        margin: 45px 0;
+    }
+    .input-group__icon {
+        display: none;
+        visibility: hidden;
+    }
+    .date-time-picker {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 300px;
+    }
+    .date-time-picker__date {
+        max-width: 155px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .select-dropdowns {
+        flex-direction: column;
+        margin-top: 0;
+        margin-top: 20px;
+    }
+    .select-dropdowns__floor-room {
+        min-width: 300px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .select-dropdowns__floor-room__floor {
+        max-width: 155px;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+    .select-dropdowns__floor-room__room {
+        max-width: 155px;
+    }
+    hr {
+        display: none;
+    }
+    .btns-comment {
+        max-width: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+    .comment {
+        max-width: 270px;
+        margin: 20px 30px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
     }
 }
