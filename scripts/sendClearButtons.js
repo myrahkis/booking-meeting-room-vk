@@ -16,10 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
 /* кнопка очистить */
 
 document.addEventListener('DOMContentLoaded', () => {
-    clearButton = document.querySelector('.button__clear-btn');
+    const clearButton = document.querySelector('.button__clear-btn');
+    const dropSelectRoom = document.querySelector('.form-select-room');
 
     clearButton.addEventListener('reset', (e) => {
         e.preventDefault();
+    })
+    clearButton.addEventListener('click', () => {
+        while (dropSelectRoom.childNodes.length) {
+            if (dropSelectRoom.firstChild.tagName == 'OPTGROUP') {
+                while (dropSelectRoom.firstChild.childNodes.length) {
+                    dropSelectRoom.firstChild.removeChild(dropSelectRoom.firstChild.firstChild);
+                }
+            }
+            dropSelectRoom.removeChild(dropSelectRoom.firstChild);
+        }
     })
 })
 
