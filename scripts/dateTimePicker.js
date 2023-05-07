@@ -8,5 +8,3 @@ $(function() {
         minDate: 0,
     });
 });
-
-
