@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
-.select-dropdowns__floor-room, .date-time-picker {
+.container-fluid, .select-dropdowns__floor-room, .date-time-picker {
   display: flex;
   flex-direction: row;
 }
@@ -97,6 +97,36 @@
   margin-bottom: 25px;
 }
 
+.container-fluid {
+  padding-right: 20px;
+  width: 100%;
+}
+
+.logo {
+  width: 30%;
+  padding-top: 10px;
+  background-color: #11a795;
+}
+
+.logo__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-left: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 /* Large: 992-1199px */
 @media (max-width: 1199px) {
   .container {
@@ -120,6 +150,9 @@
 }
 /* Extra small: 320-575px */
 @media (max-width: 575px) {
+  .header {
+    display: none;
+  }
   .container {
     max-width: 300px;
     margin: 0 auto;
@@ -210,6 +243,13 @@
 .button__clear-btn:hover {
   background: #d1371f;
   border-color: #d1371f;
+}
+
+.menu__btn-alert, .menu__btn-settings, .menu__btn-avatar {
+  cursor: pointer;
+  margin: 10px;
+  background-color: white;
+  border: none;
 }
 
 * {

@@ -38,3 +38,10 @@ $text-color: #FFFFFF;
         border-color: $hover-clear-color;
     }
 }
+
+.menu__btn-alert, .menu__btn-settings, .menu__btn-avatar {
+    cursor: pointer;
+    margin: 10px;
+    background-color: white;
+    border: none;
+}

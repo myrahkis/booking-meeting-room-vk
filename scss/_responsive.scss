@@ -24,6 +24,9 @@
 
 /* Extra small: 320-575px */
 @media (max-width: 575px) {
+    .header {
+        display: none;
+    }
     .container {
         max-width: 300px;
         margin: 0 auto;
