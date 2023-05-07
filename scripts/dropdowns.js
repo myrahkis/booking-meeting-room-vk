@@ -22,7 +22,7 @@ function dropdownLists(arr) {
 
 
     document.addEventListener("DOMContentLoaded", function() {
-        document.querySelector('.select-dropdowns__meeting-room__button').onclick = function() {
+        dropSelectFloor.addEventListener('click', function() {
             while (dropSelectRoom.childNodes.length) {
                 if (dropSelectRoom.firstChild.tagName == 'OPTGROUP') {
                     while (dropSelectRoom.firstChild.childNodes.length) {
@@ -41,7 +41,28 @@ function dropdownLists(arr) {
                 option.innerHTML = room;
                 dropSelectRoom.appendChild(option);
             }
-        };
+        })
+
+        // document.querySelector('.select-dropdowns__meeting-room__button').onclick = function() {
+        //     while (dropSelectRoom.childNodes.length) {
+        //         if (dropSelectRoom.firstChild.tagName == 'OPTGROUP') {
+        //             while (dropSelectRoom.firstChild.childNodes.length) {
+        //                 dropSelectRoom.firstChild.removeChild(sel.firstChild.firstChild);
+        //             }
+        //         }
+        //         dropSelectRoom.removeChild(dropSelectRoom.firstChild);
+        //     }
+
+            // const selectedFloor = parseInt(dropSelectFloor.value) + 2;
+        //     let rooms = getNumbersOfRooms(selectedFloor);
+
+        //     for (let room of rooms) {
+        //         let option = document.createElement('option');
+        //         option.value = room;
+        //         option.innerHTML = room;
+        //         dropSelectRoom.appendChild(option);
+        //     }
+        // };
     });
 
     selectDivFloor.append(dropSelectFloor);
