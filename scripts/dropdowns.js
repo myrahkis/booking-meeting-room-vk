@@ -1,23 +1,30 @@
 /* выпадающие списки этажей */
 
 let floors = [];
-let rooms = [];
 
 for (let i = 3; i <= 27; i++) {
     floors.push(i);
 }
 
-function dropdownLists(arr) {
+function dropdownListsInit() {
     const dropSelectFloor = document.querySelector('.form-select-floor');
     const selectDivFloor = document.querySelector('.select-dropdowns__floor');
     const dropSelectRoom = document.querySelector('.form-select-room');
     const selectDivRoom = document.querySelector('.select-dropdowns__meeting-room');
 
-    for (let floor of arr) {
+    for (let floor of floors) {
         let option = document.createElement('option');
-        option.value = floor - 2;
+        option.value = floor;
         option.innerHTML = floor;
         dropSelectFloor.appendChild(option);
+    }
+
+    // заполнение для 3 этажа при загрузке страницы
+    for (let i = 1; i <= 10; i++) {
+        let option = document.createElement('option');
+        option.value = i;
+        option.innerHTML = i;
+        dropSelectRoom.appendChild(option);
     }
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -28,7 +35,7 @@ function dropdownLists(arr) {
     function addRooms() {
         clearSelectRooms();
             
-        const selectedFloor = parseInt(dropSelectFloor.value) + 2;
+        const selectedFloor = parseInt(dropSelectFloor.value);
         let rooms = getNumbersOfRooms(selectedFloor);
 
         for (let room of rooms) {
@@ -58,16 +65,15 @@ function dropdownLists(arr) {
 function getNumbersOfRooms(floor) {
     let diff = floor - 3;
     let firstOnFloor = diff * 10;
-    if (rooms.length > 9) {
-        rooms = [];
-    }
+    let mass_rooms = []; // массив для комнат теперь локальная переменная
 
     for (let i = firstOnFloor + 1; i <= firstOnFloor + 10; i++) {
-        rooms.push(i);
+        mass_rooms.push(i);
     }
-    return rooms;
+
+    return mass_rooms;
 }
 
-dropdownLists(floors);
+dropdownListsInit();
 
 
